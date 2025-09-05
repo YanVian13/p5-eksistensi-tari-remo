@@ -40,19 +40,19 @@
     <header class="hero" id="home">
       <div class="hero-left">
         <div class="badge">Proyek Pelestarian</div>
-        <h1>Melestarikan <span class="gradient-text">Tari Remo</span></h1>
+        <h1>Eksistensi <span class="gradient-text">Tari Remo</span></h1>
         <p class="lead">Ruang dokumentasi, cerita, dan visual untuk Tari Remo — dikemas khusus untuk generasi Z. Scroll ke bawah untuk mengeksplor.</p>
         <a class="cta" href="#about">Jelajahi</a>
 
         <div class="meta">
           <span>📸 Dokumentasi Foto & Video</span>
-          <span>🎙️ Wawancara & Narasi</span>
+          <span>🎙️ Narasi</span>
         </div>
       </div>
 
       <div class="hero-right">
         <div class="card dark-card">
-          <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1200&auto=format&fit=crop" alt="Tari Remo - ilustrasi" />
+          <img src="assets/dancer.jpg" alt="Tari Remo - ilustrasi" />
           <div class="card-tag">Arsip Tari Remo</div>
         </div>
       </div>
@@ -129,12 +129,17 @@
       </div>
       <div class="col gallery-preview">
         <div class="grid">
-          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="">
-          <img src="https://images.unsplash.com/photo-1539333160163-3f494a5e6b46?q=80&w=800&auto=format&fit=crop" alt="">
+          <img src="assets/gerakanSapaan.jpg" alt="">
+          <img src="assets/remo-kaki.jpg" alt="">
           <div class="highlight">
             <div class="small">Highlight</div>
             <div class="big">Gerakan khas: Sapaan & Intonasi</div>
             <p>Gerakan pembuka yang menandai interaksi antara penari dan penonton, dipandu oleh instrumen tradisional.</p>
+          </div>
+          <div class="highlight">
+            <div class="small">Highlight</div>
+            <div class="big">Gerakan kaki: Hentakan & Ritme</div>
+            <p>Langkah kaki yang cepat dan menghentak menjadi ciri utama Tari Remo, mengekspresikan keberanian dan semangat.</p>
           </div>
         </div>
       </div>
@@ -145,14 +150,14 @@
       <h3>Galeri</h3>
       <div class="grid-photos" aria-hidden="false">
         <!-- 8 placeholders -->
-        <figure><img src="https://images.unsplash.com/photo-1504198266286-1659872e6590?q=80&w=800&auto=format&fit=crop" alt="Penari 1"><figcaption>Penari 1</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1544213456-bf3a4a9d1b99?q=80&w=800&auto=format&fit=crop" alt="Penari 2"><figcaption>Penari 2</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop" alt="Penari 3"><figcaption>Penari 3</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Penari 4"><figcaption>Penari 4</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=800&auto=format&fit=crop" alt="Penari 5"><figcaption>Penari 5</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1509475826633-fed577a2c71b?q=80&w=800&auto=format&fit=crop" alt="Penari 6"><figcaption>Penari 6</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop" alt="Penari 7"><figcaption>Penari 7</figcaption></figure>
-        <figure><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop" alt="Penari 8"><figcaption>Penari 8</figcaption></figure>
+        <figure><img src="assets/galeri1.jpg" alt="Penari 1"><figcaption>Tari Remo Khas Surabaya</figcaption></figure>
+        <figure><img src="assets/galeri2.jpg" alt="Penari 2"><figcaption>Tari Remo Jombang - Menyambut Tamu</figcaption></figure>
+        <figure><img src="assets/galeri3.jpg" alt="Penari 3"><figcaption>Lestarikan Budaya Lokal</figcaption></figure>
+        <figure><img src="assets/galeri4.jpg" alt="Penari 4"><figcaption>Jaga idenditas bangsa</figcaption></figure>
+        <figure><img src="assets/galeri5.jpg" alt="Penari 5"><figcaption>Ekspresikan jiwa seni dalam Tari Remo</figcaption></figure>
+        <figure><img src="assets/galeri6.jpg" alt="Penari 6"><figcaption>Tari pembuka kesenian ludruk</figcaption></figure>
+        <figure><img src="assets/galeri7.jpg" alt="Penari 7"><figcaption>Pemecah Rekor MURI</figcaption></figure>
+        <figure><img src="assets/galeri8.jpg" alt="Penari 8"><figcaption>#RisingRemo</figcaption></figure>
       </div>
     </section>
 
@@ -180,59 +185,114 @@
       <div class="col">
         <h4>Suara & Musik</h4>
         <p>Potongan musik pengiring dan penjelasan alat musik tradisional yang sering digunakan pada Tari Remo.</p>
-        <audio controls>
-          <source src="audio/sample-remo.mp3" type="audio/mpeg">
-          Browser Anda tidak mendukung elemen audio.
+        <audio autoplay loop preload="auto" id="remoAudio" class="audio-player" controls preload="metadata" controlsList="nodownload">
+        <source src="audio/sample-remo.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
         </audio>
-        <p class="note">(Ganti file audio di folder /audio jika tersedia)</p>
+
+        <p class="note">- Tari Remo Gagrak Anyar -</p>
       </div>
       <div class="col">
-        <div class="video-placeholder">Video pertunjukan (ganti dengan file Anda)</div>
+        <div class="video-placeholder">
+          <video autoplay muted loop playsinline controlslist="nodownload nofullscreen" style="width:100%; height:auto; pointer-events:none;">
+          <source src="assets/pertunjukan-remo.mp4" type="video/mp4">
+          Browser Anda tidak mendukung elemen video.
+          </video>
+<!-- y ep -->
+        </div>
       </div>
     </section>
 
     <!-- SUBMIT FORM -->
     
-    <!-- CONTRIBUTION: Add to Gallery (client-side, localStorage) -->
-    <section id="submit" class="section submit">
-      <div class="card glass dark-card">
-        <h3>Tambah ke Galeri — (Simpan Lokal)</h3>
-        <p>Ingin menambahkan foto atau cerita singkat ke galeri ini? Kamu bisa mengunggah file atau menempelkan URL. Konten akan tersimpan di browsermu (tidak diunggah ke server).</p>
+    <!-- ===== TYPING RACE: RisingRemo ===== -->
+<section id="typingRace" class="section typing-race">
+  <h3>Kejar Kata — Typing Race</h3>
+  <p class="muted">Tulis persis seperti contoh. Selesaikan tanpa kesalahan untuk mendapatkan reward — teriakkan <strong>#RisingRemo</strong>!</p>
 
-        <div class="contrib-grid">
-          <div class="contrib-box">
-            <label class="file-label">
-              <input id="fileInput" type="file" accept="image/*" style="display:none">
-              <button id="chooseFileBtn" class="btn-outline">Pilih Foto dari Perangkat</button>
-            </label>
-            <div class="or">atau</div>
-            <input id="urlInput" type="url" placeholder="Tempel URL gambar (https://...)" />
-            <input id="captionInput" type="text" placeholder="Keterangan singkat (opsional)" />
-            <div class="row" style="margin-top:0.6rem">
-              <button id="addUrlBtn" class="btn">Tambahkan ke Galeri</button>
-              <button id="clearGalleryBtn" class="btn-outline">Hapus Simpanan Lokal</button>
-            </div>
-            <div class="note" style="margin-top:0.6rem;color:var(--muted);font-size:.9rem">Catatan: Konten tersimpan di browser Anda (localStorage). Jika ingin publikasi nyata, saya bisa bantu integrasi ke Cloudinary atau backend.</div>
-          </div>
-
-          <div class="share-box">
-            <h4>Tantangan #RemoRecreate</h4>
-            <p>Buat ulang satu gerakan Remo, unggah foto/rekaman pendek, dan bagikan ke media sosial. Gunakan tagar <strong>#RemoRecreate</strong> untuk dikurasi.</p>
-            <div style="display:flex;gap:.5rem;margin-top:.6rem">
-              <button id="shareTwitter" class="btn-outline">Bagikan ke Twitter</button>
-              <button id="shareWhatsApp" class="btn-outline">Bagikan ke WhatsApp</button>
-            </div>
-            <div style="margin-top:0.8rem;color:var(--muted)">Tip: Sertakan lokasi atau komunitas lokal untuk meningkatkan visibilitas.</div>
-          </div>
+  <div class="tr-container">
+    <div class="tr-left">
+      <div class="tr-sample-card card glass">
+        <div id="sampleText" class="sample-text" aria-live="polite"></div>
+        <div class="tr-controls" style="margin-top:.6rem;display:flex;gap:.5rem;flex-wrap:wrap">
+          <button id="trNewBtn" class="btn-outline">Kalimat Baru</button>
+          <button id="trStartBtn" class="btn">Mulai</button>
+          <button id="trResetBtn" class="btn-outline">Reset</button>
         </div>
       </div>
-    </section>
+
+      <div class="card glass" style="margin-top:.8rem">
+        <label for="trInput" style="font-weight:700">Ketik di sini:</label>
+        <textarea id="trInput" rows="3" placeholder="Mulai mengetik..." autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+      </div>
+    </div>
+
+    <div class="tr-right">
+      <div class="card glass tr-stats">
+        <div><strong>Time</strong><div id="trTime">00:00.00</div></div>
+        <div><strong>WPM</strong><div id="trWpm">0</div></div>
+        <div><strong>Accuracy</strong><div id="trAcc">100%</div></div>
+        <div><strong>Progress</strong>
+          <div class="tr-progress-bar"><div id="trProgress" class="tr-progress"></div></div>
+        </div>
+        <div style="margin-top:.6rem">
+          <button id="trShareBtn" class="btn-outline">Bagikan #RisingRemo</button>
+        </div>
+      </div>
+
+      <div class="card glass tr-history" style="margin-top:.8rem">
+        <h4>Riwayat Reward</h4>
+        <ul id="trHistory" class="muted" style="padding-left:1rem;margin:0"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reward modal (paste sekali di body akhir jika belum ada) -->
+<div id="trRewardModal" class="tr-modal" role="dialog" aria-hidden="true">
+  <div class="tr-modal-content">
+    <h3 id="trRewardTitle">Hebat!</h3>
+    <p id="trRewardMsg"></p>
+    <div class="tr-reward-stats">
+      <div>Koin: <strong id="trCoins">0</strong></div>
+      <div>Badge: <strong id="trBadge">-</strong></div>
+    </div>
+    <div style="margin-top:.8rem">
+      <button id="trModalShareBtn" class="btn-accent">Bagikan #RisingRemo</button>
+      <button id="trModalCloseBtn" class="btn-outline">Tutup</button>
+    </div>
+  </div>
+</div>
+<canvas id="trConfetti" class="tr-confetti"></canvas>
+
+
+
+<!-- Reward Modal & Confetti Overlay -->
+<div id="rrRewardModal" class="rr-modal" role="dialog" aria-hidden="true">
+  <div class="rr-modal-content">
+    <h3 id="rrRewardTitle">Selamat!</h3>
+    <div id="rrRewardBody">
+      <p id="rrRewardMsg"></p>
+      <div class="rr-reward-stats">
+        <div>Koin: <strong id="rrRewardCoins">0</strong></div>
+        <div>Badge: <strong id="rrRewardBadge">-</strong></div>
+      </div>
+      <div style="margin-top:.8rem">
+        <button id="rrModalShare" class="btn-accent">Bagikan #RisingRemo</button>
+        <button id="rrModalClose" class="btn-outline">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+<canvas id="rrConfetti" class="rr-confetti"></canvas>
+
+
 
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div>© 2025 Proyek Pelestarian Tari Remo — Dibuat untuk Gen Z</div>
-      <div>Ingin penyesuaian warna, font, atau versi lain? Saya bisa bantu.</div>
+      <div>© 2025 Proyek Pelestarian Tari Remo — Kelompok 3 Kelas XI-5</div>
+      <div>Langkah berani, warisan abadi.</div>
     </footer>
   </main>
 
