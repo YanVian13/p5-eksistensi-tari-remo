@@ -12,6 +12,10 @@
   --max-width: 1100px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -178,3 +182,74 @@ input[type=url], input[type=text]{width:100%; box-sizing:border-box}
 /* Slight pulse on CTA so users notice it */
 .cta { transition: transform .25s ease, box-shadow .25s ease; }
 .cta:hover { transform: translateY(-4px) scale(1.02); box-shadow:0 16px 40px rgba(185,28,28,0.14); }
+
+/* ENGAGE styles */
+.engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.engage-card{padding:1rem;border-radius:12px}
+.challenge-item .small{padding:.35rem .6rem;border-radius:8px;font-weight:600}
+.btn-outline.small{padding:.35rem .6rem;font-size:.85rem}
+.pick-sticker{transition:transform .18s, box-shadow .18s}
+.pick-sticker:hover{transform:translateY(-4px) scale(1.03); box-shadow:0 12px 30px rgba(0,0,0,0.5)}
+@media (max-width:900px){ .engage-grid{grid-template-columns:1fr;}}
+
+/* Typing Race styles */
+.typing-race{ padding:1rem 0; margin-top:1.2rem }
+.tr-container{ display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap }
+.tr-left{ flex:1 1 560px; min-width:320px }
+.tr-right{ width:320px; min-width:260px }
+.tr-right h4{ margin: 15px;}
+
+.sample-text{ font-family: ui-serif, Georgia, serif; font-size:1.05rem; line-height:1.6; padding:.8rem; border-radius:10px; background:rgba(255,255,255,0.02); min-height:110px; white-space:pre-wrap; word-break:break-word }
+#trInput{ width:100%; padding:.6rem; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:var(--text); font-size:1rem; resize:vertical; min-height:72px }
+.tr-controls .btn{ padding:.5rem .7rem; font-weight:700 }
+
+.tr-stats{ display:flex; flex-direction:column; gap:.6rem; padding:1rem }
+.tr-stats div{ display:flex; justify-content:space-between; align-items:center }
+.tr-progress-bar{ background:rgba(255,255,255,0.04); height:10px; border-radius:999px; overflow:hidden; margin-top:.4rem }
+.tr-progress{ width:0%; height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-bright)); transition:width .18s }
+
+.sample-char.correct{ background: rgba(76,175,80,0.12); color:var(--text) }
+.sample-char.incorrect{ background: rgba(244,67,54,0.12); color:var(--text) }
+.sample-char.cursor{ outline:2px solid rgba(255,255,255,0.06); box-shadow:0 2px 8px rgba(0,0,0,0.2) }
+
+.tr-history{ max-height:160px; overflow:auto }
+
+.tr-modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); z-index:1200; visibility:hidden; opacity:0; transition:opacity .18s, visibility .18s }
+.tr-modal[aria-hidden="false"]{ visibility:visible; opacity:1 }
+.tr-modal-content{ background:var(--bg); padding:1rem 1.1rem; border-radius:12px; box-shadow:0 18px 40px rgba(0,0,0,0.4); width:320px; text-align:center; color:var(--text) }
+.tr-reward-stats{ display:flex; gap:1rem; justify-content:center; margin-top:.6rem; font-weight:800 }
+
+.tr-confetti{ position:fixed; inset:0; pointer-events:none; z-index:1250; display:none }
+.tr-confetti.active{ display:block }
+
+@media(max-width:900px){ .tr-container{ flex-direction:column } .tr-right{ width:100% } .tr-left{ order:1 } }
+
+
+/* Reward modal */
+.rr-modal{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.45); z-index:1200; visibility:hidden; opacity:0; transition:opacity .18s, visibility .18s }
+.rr-modal[aria-hidden="false"]{ visibility:visible; opacity:1 }
+.rr-modal-content{ background:var(--bg); padding:1.1rem 1.2rem; border-radius:12px; box-shadow:0 18px 40px rgba(0,0,0,0.4); width:320px; text-align:center; color:var(--text) }
+.rr-reward-stats{ display:flex; gap:1rem; justify-content:center; margin-top:.6rem; font-weight:800 }
+.rr-confetti{ position:fixed; inset:0; pointer-events:none; z-index:1250; display:none }
+
+/* small: emphasize confetti canvas active state */
+.rr-confetti.active{ display:block }
+
+
+
+/* Added for Typing Race modal share button */
+.btn-accent{
+  background: linear-gradient(90deg, var(--accent, #ef4444), var(--accent-bright, #f97316));
+  color: white;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+.btn-accent:hover{ transform: translateY(-2px); transition: transform .18s ease; }
+
+.audio-player { width: 100%; max-width: 560px; display:block; margin: 12px 0; }
+audio::-internal-media-controls-download-button { display: none !important; }
+audio::-webkit-media-controls-enclosure { overflow: hidden; }
