@@ -1,4 +1,19 @@
 // api/admin.js  (simple admin list + approve/reject)
+
+// top of api/admin.js
+const jwt = require('jsonwebtoken');
+function verifyAdminFromReq(req) {
+  const cookie = req.headers.cookie || '';
+  const match = cookie.split(';').map(s=>s.trim()).find(c=>c.startsWith('remo_admin='));
+  if(!match) return false;
+  const token = match.split('=')[1];
+  try {
+    const payload = jwt.verify(token, process.env.ADMIN_SECRET);
+    return payload && payload.role === 'admin';
+  } catch(e) { return false; }
+}
+
+
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
