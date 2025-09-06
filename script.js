@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const waktu = formatShareTime(elapsedMs || 0);
     const WPM = Math.round(wpm || 0);
     const url = 'https://p5-eksistensi-tari-remo.vercel.app';
-    return `Aku menang di mini-game Typing Race dalam waktu ${waktu}, dengan kecepatan ${WPM}WPM — Berani kalahin skorku? #Rising Remo [${url}]`;
+    return `Aku menang di mini-game Typing Race dalam waktu ${waktu}, dengan kecepatan ${WPM}WPM — Berani kalahin skorku? #RisingRemo [${url}]`;
   }
 
   function doShareToWhatsApp(text){
